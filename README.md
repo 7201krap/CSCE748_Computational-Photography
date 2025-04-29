@@ -51,11 +51,11 @@ This paper introduces novel deep learning models for image inpainting that lever
 - **Depth-Enhanced Models:** Cleaner, more accurate inpainting with fewer artifacts.  
 - **Grad-CAM Analysis:** Attention-based models focus more on masked regions and structural boundaries than the baseline model.
 
-| Figure 1. [Inpainting] Baseline Model with Line Mask | Figure 2. [Inpainting] DE-SHA with Line Mask |
+| Figure 1. [Inpainting] Baseline with Line Mask | Figure 2. [Inpainting] DE-SHA with Line Mask |
 |:--------------------------------:|:--------------------------------:|
 | ![Figure 1](images/baseline_line.png) | ![Figure 2](images/sha_line.png) |
 
-| Figure 3. [Grad-CAM] Baseline Model with Square Mask | Figure 4. [Grad-CAM] DE-SHA with Square Mask |
+| Figure 3. [Grad-CAM] Baseline with Square Mask | Figure 4. [Grad-CAM] DE-SHA with Square Mask |
 |:--------------------------------:|:--------------------------------:|
 | ![Figure 3](images/baseline_square_cam.png) | ![Figure 4](images/sha_square_cam.png) |
 
