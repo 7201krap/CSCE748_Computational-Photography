@@ -8,7 +8,7 @@ Texas A&M University, College Station, TX, 77840
 
 ## Summary
 
-This paper introduces novel deep learning models for image inpainting that leverage both RGB and depth information, fused via attention mechanisms, to reconstruct missing regions in images. Traditional inpainting models often rely solely on RGB images and convolutional neural networks, which can lead to artifacts and poor reconstructions, especially for complex structures or large missing areas. Inspired by how human vision uses stereo cues for depth perception, our approach integrates a dual-encoder architecture-one encoder for RGB, one for depth-and fuses their features in the decoder using either simple or multi-head attention. 
+This paper introduces novel deep learning models for image inpainting that leverage both RGB and depth information, fused via attention mechanisms, to reconstruct missing regions in images. Traditional inpainting models often rely solely on RGB images and convolutional neural networks, which can lead to artifacts and poor reconstructions, especially for complex structures or large missing areas. Inspired by how human vision uses stereo cues for depth perception, our approach integrates a dual-encoder architecture, one encoder for RGB and the other for depth map, and fuses their features in the decoder using either simple (single-head) or multi-head attention. 
 
 **Key Contributions:**
 
@@ -32,10 +32,11 @@ This paper introduces novel deep learning models for image inpainting that lever
 | DE-MHA      | Square    | 0.06813 (-14.50%)  | 1.89098 (+4.13%)  | 1.02495 (+3.27%)  | 0.52979 (-29.71%) |
 
 
-- **Baseline (input: RGB, output: RGB)**: U-Net like Encoder-Decoder model 
+- **Baseline (input: RGB, output: RGB)**: U-Net-like Encoder-Decoder model 
 - **DE-SHA (input: RGB and Depth, output: RGB)**: Depth-Enhanced Simple (Single-Head) Attention model 
-- **DE-MHA (input: RGB and Depth, output: RGB)**: Depth-Enhanced Multi-Head Attention model  
+- **DE-MHA (input: RGB and Depth, output: RGB)**: Depth-Enhanced Multi-Head Attention model
 - Lower SSD and LPIPS, higher PSNR and SSIM indicate better performance.
+- Dataset: NYU Depth V2
 
 **Highlights:**
 
@@ -49,12 +50,13 @@ This paper introduces novel deep learning models for image inpainting that lever
 - **Baseline (RGB-only):** Noticeable artifacts and color distortions in reconstructed areas.
 - **Depth-Enhanced Models:** Cleaner, more accurate inpainting with fewer artifacts.  
 - **Grad-CAM Analysis:** Attention-based models focus more on masked regions and structural boundaries than the baseline model.
+- See below for some examples. 
 
-| Figure 1. [Inpainting] Baseline Model with Line Mask | Figure 2. [Inpainting] DE-SHA with Line Mask |
+| Figure 1. [Inpainting] Baseline with Line Mask | Figure 2. [Inpainting] DE-SHA with Line Mask |
 |:--------------------------------:|:--------------------------------:|
 | ![Figure 1](images/baseline_line.png) | ![Figure 2](images/sha_line.png) |
 
-| Figure 3. [Grad-CAM] Baseline Model with Square Mask | Figure 4. [Grad-CAM] DE-SHA with Square Mask |
+| Figure 3. [Grad-CAM] Baseline with Square Mask | Figure 4. [Grad-CAM] DE-SHA with Square Mask |
 |:--------------------------------:|:--------------------------------:|
 | ![Figure 3](images/baseline_square_cam.png) | ![Figure 4](images/sha_square_cam.png) |
 
