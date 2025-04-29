@@ -50,6 +50,7 @@ This paper introduces novel deep learning models for image inpainting that lever
 - **Baseline (RGB-only):** Noticeable artifacts and color distortions in reconstructed areas.
 - **Depth-Enhanced Models:** Cleaner, more accurate inpainting with fewer artifacts.  
 - **Grad-CAM Analysis:** Attention-based models focus more on masked regions and structural boundaries than the baseline model.
+- See below for some examples. 
 
 | Figure 1. [Inpainting] Baseline with Line Mask | Figure 2. [Inpainting] DE-SHA with Line Mask |
 |:--------------------------------:|:--------------------------------:|
