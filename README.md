@@ -1,8 +1,10 @@
 # Leveraging Depth and Attention Mechanisms for Improved RGB Image Inpainting
 
 **Authors:**  
-Jin Hyun Park, Harine Choi, Praewa Pitiphat  
-Texas A&M University
+Jin Hyun Park, Dept. of Computer Science and Engineering, jinhyun.park@tamu.edu \
+Harine Choi, Dept. of Multidisciplinary Engineering, harinec@tamu.edu \
+Praewa Pitiphat, Dept. of Computer Science and Engineering, riolu_san@tamu.edu \
+Texas A&M University, College Station, TX, 77840
 
 ## Summary
 
@@ -40,21 +42,23 @@ This paper introduces novel deep learning models for image inpainting that lever
 - **Quantitative gains**: For line masks, DE-MHA reduces SSD by 79% and LPIPS by 84%, while increasing PSNR by 25% and SSIM by 9% over the baseline.
 - **Qualitative improvements**: Depth-based models eliminate color artifacts and produce more realistic, coherent inpainted regions.
 
----
-
 ## Visual Results
 
 - **Baseline (RGB-only):** Noticeable artifacts and color distortions in reconstructed areas.
 - **Depth-Enhanced Models:** Cleaner, more accurate inpainting with fewer artifacts.  
 - **Grad-CAM Analysis:** Attention-based models focus more on masked regions and structural boundaries than the baseline model.
 
----
+| Figure 1. Baseline Model with Square Mask | Figure 2. DE-SHA with Square Mask |
+|:--------------------------------:|:--------------------------------:|
+| ![Figure 1](images/baseline_line.png) | ![Figure 2](images/sha_line.png) |
+
+| Figure 1. Baseline Model with Square Mask | Figure 2. DE-SHA with Square Mask |
+|:--------------------------------:|:--------------------------------:|
+| ![Figure 1](images/baseline_square_cam.png) | ![Figure 2](images/sha_square_cam.png) |
 
 ## Takeaway
 
 Integrating depth information and attention mechanisms into image inpainting models leads to significant improvements in reconstruction quality-both quantitatively and qualitatively. The dual-encoder, attention-fusion approach enables the model to better understand scene geometry and context, resulting in more robust and realistic inpainting.
-
----
 
 ## Citation (BibTeX)
 
