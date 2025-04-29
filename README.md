@@ -65,7 +65,7 @@ Integrating depth information and attention mechanisms into image inpainting mod
 ## Citation
     @article{will_be_updated,
     title={Leveraging Depth and Attention Mechanisms for Improved RGB Image Inpainting},
-    author={Jin Hyun Park and Harine Choi and Praewa Pitiphat},
+    author={Jin Hyun Park, Harine Choi and Praewa Pitiphat},
     year={2025},
     institution={Texas A&M University}
     }
