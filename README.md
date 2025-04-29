@@ -31,8 +31,10 @@ This paper introduces novel deep learning models for image inpainting that lever
 | DE-SHA      | Square    | 0.07056 (-11.45%)  | 1.86784 (+2.86%)  | 1.02375 (+3.15%)  | 0.53271 (-29.32%) |
 | DE-MHA      | Square    | 0.06813 (-14.50%)  | 1.89098 (+4.13%)  | 1.02495 (+3.27%)  | 0.52979 (-29.71%) |
 
-- **DE-SHA**: Depth-Enhanced Simple (Single-Head) Attention  
-- **DE-MHA**: Depth-Enhanced Multi-Head Attention  
+
+- **Baseline (input: RGB, output: RGB)**: U-Net like Encoder-Decoder model 
+- **DE-SHA (input: RGB and Depth, output: RGB)**: Depth-Enhanced Simple (Single-Head) Attention model 
+- **DE-MHA (input: RGB and Depth, output: RGB)**: Depth-Enhanced Multi-Head Attention model  
 - Lower SSD and LPIPS, higher PSNR and SSIM indicate better performance.
 
 **Highlights:**
@@ -48,23 +50,22 @@ This paper introduces novel deep learning models for image inpainting that lever
 - **Depth-Enhanced Models:** Cleaner, more accurate inpainting with fewer artifacts.  
 - **Grad-CAM Analysis:** Attention-based models focus more on masked regions and structural boundaries than the baseline model.
 
-| Figure 1. Baseline Model with Square Mask | Figure 2. DE-SHA with Square Mask |
+| Figure 1. [Inpainting Task] Baseline Model with Square Mask | Figure 2. [Inpainting Task] DE-SHA with Line Mask |
 |:--------------------------------:|:--------------------------------:|
 | ![Figure 1](images/baseline_line.png) | ![Figure 2](images/sha_line.png) |
 
-| Figure 1. Baseline Model with Square Mask | Figure 2. DE-SHA with Square Mask |
+| Figure 3. [Grad-CAM analysis] Baseline Model with Square Mask | Figure 4. [Grad-CAM analysis] DE-SHA with Square Mask |
 |:--------------------------------:|:--------------------------------:|
-| ![Figure 1](images/baseline_square_cam.png) | ![Figure 2](images/sha_square_cam.png) |
+| ![Figure 3](images/baseline_square_cam.png) | ![Figure 4](images/sha_square_cam.png) |
 
 ## Takeaway
 
 Integrating depth information and attention mechanisms into image inpainting models leads to significant improvements in reconstruction quality-both quantitatively and qualitatively. The dual-encoder, attention-fusion approach enables the model to better understand scene geometry and context, resulting in more robust and realistic inpainting.
 
-## Citation (BibTeX)
-
-@article{park2025depthinpainting,
-title={Leveraging Depth and Attention Mechanisms for Improved RGB Image Inpainting},
-author={Jin Hyun Park and Harine Choi and Praewa Pitiphat},
-year={2025},
-institution={Texas A&M University}
-}
+## Citation
+    @article{will_be_updated,
+    title={Leveraging Depth and Attention Mechanisms for Improved RGB Image Inpainting},
+    author={Jin Hyun Park and Harine Choi and Praewa Pitiphat},
+    year={2025},
+    institution={Texas A&M University}
+    }
