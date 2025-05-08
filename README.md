@@ -65,9 +65,9 @@ This paper introduces novel deep learning models for image inpainting that lever
 Integrating depth information and attention mechanisms into image inpainting models leads to significant improvements in reconstruction quality-both quantitatively and qualitatively. The dual-encoder, attention-fusion approach enables the model to better understand scene geometry and context, resulting in more robust and realistic inpainting.
 
 ## Citation
-    @article{will_be_updated,
-    title={Leveraging Depth and Attention Mechanisms for Improved RGB Image Inpainting},
-    author={Jin Hyun Park, Harine Choi and Praewa Pitiphat},
-    year={2025},
-    institution={Texas A&M University}
+    @article{park2025leveraging,
+      title={Leveraging Depth and Attention Mechanisms for Improved RGB Image Inpainting},
+      author={Park, Jin Hyun and Choi, Harine and Pitiphat, Praewa},
+      journal={arXiv preprint arXiv:2505.00735},
+      year={2025}
     }
